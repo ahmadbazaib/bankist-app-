@@ -137,7 +137,7 @@ console.log(arr.at(-1));
 
 console.log('ahmad'.at(0));
 console.log('ahmad'.at(-1));
-*/
+
 
 ////////////////////////////////
 // LOOPING ARRAYS: FOREACH METHOD
@@ -190,3 +190,4 @@ console.log(uniqueCurrencies);
 uniqueCurrencies.forEach(function (value, _, map) {
   console.log(`${value}: ${value}`);
 });
+*/
