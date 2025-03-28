@@ -117,7 +117,6 @@ const createUsernames = function (accs) {
       .join('');
   });
 };
-
 createUsernames(accounts);
 
 /////////////////////////////////////////////////
@@ -459,3 +458,26 @@ Test data:
 // const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 // const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 // console.log(avg1, avg2);
+
+/*
+////////////////////////////////
+// THE FIND METHOD
+
+const firstWithdrawal = movements.find(mov => mov < 0);
+console.log(movements);
+console.log(firstWithdrawal);
+
+console.log(accounts);
+
+const account = accounts.find(acc => acc.owner === 'Huzaif Shah');
+console.log(account);
+
+let accountUser;
+for (const acc of accounts) {
+  if (acc.owner === 'Huzaif Shah') {
+    account = acc;
+    break; // Stop the loop once we find the match
+  }
+}
+console.log(account);
+*/
