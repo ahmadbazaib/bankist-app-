@@ -459,7 +459,6 @@ Test data:
 // const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 // console.log(avg1, avg2);
 
-/*
 ////////////////////////////////
 // THE FIND METHOD
 
@@ -475,9 +474,8 @@ console.log(account);
 let accountUser;
 for (const acc of accounts) {
   if (acc.owner === 'Huzaif Shah') {
-    account = acc;
+    accountUser = acc;
     break; // Stop the loop once we find the match
   }
 }
-console.log(account);
-*/
+console.log(accountUser);
