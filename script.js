@@ -557,4 +557,26 @@ for (const acc of accounts) {
   }
 }
 console.log(accountUser);
+
+
+////////////////////////////////
+// FINDLAST AND FINDLASTINDEX METHODS
+
+console.log(movements);
+
+const lastWithdrawal = movements.findLast(mov => mov < 0);
+console.log(lastWithdrawal);
+
+// Your latest larget movement was X movements ago
+
+const latestLargesMovementIndex = movements.findLastIndex(
+  mov => Math.abs(mov) > 1000
+);
+console.log(latestLargesMovementIndex);
+
+console.log(
+  `Your latest largest movement was ${
+    movements.length - latestLargesMovementIndex
+  } movements ago`
+);
 */
