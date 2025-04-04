@@ -595,19 +595,61 @@ console.log(
     movements.length - latestLargesMovementIndex
   } movements ago`
 );
-*/
+
 
 ////////////////////////////////
-// Some and Every Method
+// SOME AND EVERY METHOD
 
 console.log(movements);
 
 // Equality
 console.log(movements.includes(-130));
 
-// Condition
+// SOME: Condition
 console.log(movements.some(mov => mov === -130));
 
 const anyDeposit = movements.some(mov => mov > 0);
 const greaterDeposit = movements.some(mov => mov > 5000);
 console.log(anyDeposit, greaterDeposit);
+
+// EVERY
+console.log(movements.every(mov => mov > 0));
+console.log(account4.movements.every(mov => mov > 0));
+console.log(accounts[3]?.movements?.every(mov => mov > 0));
+
+// Separate CallBack
+const deposits = mov => mov > 0;
+console.log(movements.some(deposits));
+console.log(movements.every(deposits));
+console.log(movements.filter(deposits));
+
+
+////////////////////////////////
+// FLAT AND FLATMAP METHOD
+
+const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+console.log(arr.flat());
+
+const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+console.log(arrDeep.flat(2));
+
+const accountsMovements = accounts.map(acc => acc.movements);
+console.log(accountsMovements);
+
+const allMovements = accountsMovements.flat();
+console.log(allMovements);
+
+const overallBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+console.log(overallBalance);
+
+const overallMovements = accounts
+  .map(acc => acc.movements)
+  .flat()
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overallMovements);
+
+const overallMovements1 = accounts
+  .flatMap(acc => acc.movements)
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overallMovements1);
+*/
