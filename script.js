@@ -580,3 +580,18 @@ console.log(
   } movements ago`
 );
 */
+
+////////////////////////////////
+// Some and Every Method
+
+console.log(movements);
+
+// Equality
+console.log(movements.includes(-130));
+
+// Condition
+console.log(movements.some(mov => mov === -130));
+
+const anyDeposit = movements.some(mov => mov > 0);
+const greaterDeposit = movements.some(mov => mov > 5000);
+console.log(anyDeposit, greaterDeposit);
