@@ -780,3 +780,34 @@ fetch? HINT: Use the "Math.max" method along with the ... operator.
 
 // console.log(fetchWeight);
 // console.log(heaviestFetchBreed);
+
+////////////////////////////////
+// SORTING ARRAYS
+
+// Strings
+const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
+console.log(owners.sort());
+console.log(owners); // Mutated
+
+// Numbers
+console.log(movements);
+console.log(movements.sort());
+
+// return < 0, A, B (Keep Order)
+// return > 0, B, A (Switch order)
+
+// Ascending
+// movements.sort((a, b) => {
+//   if (a > b) return 1;
+//   if (a < b) return -1;
+// });
+movements.sort((a, b) => a - b);
+console.log(movements);
+
+// Descending
+// movements.sort((a, b) => {
+//   if (a > b) return -1;
+//   if (a < b) return 1;
+// });
+movements.sort((a, b) => b - a);
+console.log(movements);
