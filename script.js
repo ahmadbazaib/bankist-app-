@@ -823,3 +823,6 @@ console.log(movements);
 movements.sort((a, b) => b - a);
 console.log(movements);
 */
+
+////////////////////////////////
+// ARRAY GROUPING
