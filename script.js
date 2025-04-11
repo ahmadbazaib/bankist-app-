@@ -1182,7 +1182,7 @@ console.log((2.7).toFixed(0));
 console.log((2.7).toFixed(3));
 console.log((3.458).toFixed(2));
 console.log(+(3.458).toFixed(2));
-*/
+
 
 ////////////////////////////////
 // REMAINDER OPERATOR
@@ -1213,3 +1213,26 @@ labelBalance.addEventListener('click', function () {
     if (i % 3 === 0) row.style.backgroundColor = 'blue';
   });
 });
+
+
+////////////////////////////////
+// NUMERIC SEPARATORS
+
+// 287,460,000,000
+const diameter1 = 287460000000;
+const diameter2 = 287_460_000_000;
+console.log(diameter1, diameter2);
+
+const price = 345_99;
+console.log(price);
+
+const transferFee1 = 15_00;
+const transferFee2 = 1_500;
+
+const PI = 3.1415;
+console.log(PI);
+
+console.log(Number('230000'));
+console.log(Number('230_000'));
+console.log(parseInt('230_000'));
+*/
