@@ -1141,6 +1141,7 @@ console.log(Number.isInteger(20 / 0));
 
 ////////////////////////////////
 // COUNTING AND CHECKING NUMBERS
+
 console.log(Math.sqrt(25));
 console.log(25 ** (1 / 2));
 console.log(8 ** (1 / 3));
@@ -1182,3 +1183,33 @@ console.log((2.7).toFixed(3));
 console.log((3.458).toFixed(2));
 console.log(+(3.458).toFixed(2));
 */
+
+////////////////////////////////
+// REMAINDER OPERATOR
+
+console.log(5 % 2);
+console.log(5 / 2); // 5 = 2 * 2 + 1
+
+console.log(8 % 3);
+console.log(8 / 3); // 8 = 3 * 2 + 2
+
+console.log(6 % 2);
+console.log(6 / 2);
+
+console.log(7 % 2);
+console.log(7 / 2);
+
+const isEven = n => n % 2 === 0;
+console.log(isEven(8));
+console.log(isEven(23));
+console.log(isEven(514));
+
+labelBalance.addEventListener('click', function () {
+  [...document.querySelectorAll('.movements__row')].forEach(function (row, i) {
+    // 0, 2, 4
+    if (i % 2 === 0) row.style.backgroundColor = 'orangered';
+
+    // 0, 3, 6, 9
+    if (i % 3 === 0) row.style.backgroundColor = 'blue';
+  });
+});
