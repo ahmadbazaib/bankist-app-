@@ -20,8 +20,8 @@ const account1 = {
     '2020-04-01T10:17:24.185Z',
     '2020-05-08T14:11:59.604Z',
     '2020-05-27T17:01:17.194Z',
-    '2020-07-11T23:36:17.929Z',
-    '2020-07-12T10:51:36.790Z',
+    '2025-04-08T23:36:17.929Z',
+    '2025-04-11T10:51:36.790Z',
   ],
   currency: 'EUR',
   locale: 'pt-PT', // de-DE
@@ -75,6 +75,27 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+////////////////////////////////////////////
+// FUNCTIONS
+
+const formatMovementDate = function (date) {
+  const calcDaysPassed = (date1, date2) =>
+    Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
+
+  const daysPassed = calcDaysPassed(new Date(), date);
+  console.log(daysPassed);
+
+  if (daysPassed === 0) return 'Today';
+  if (daysPassed === 1) return 'Yesterday';
+  if (daysPassed <= 7) return `${daysPassed} days ago`;
+  else {
+    const day = `${date.getDate()}`.padStart(2, 0);
+    const month = `${date.getMonth()}`.padStart(2, 0);
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
+};
+
 const displayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = '';
 
@@ -82,7 +103,6 @@ const displayMovements = function (acc, sort = false) {
     movement: mov,
     movementDate: acc.movementsDates.at(i),
   }));
-  console.log(combinedMovsDates);
 
   if (sort) combinedMovsDates.sort((a, b) => a.movement - b.movement);
   // const movs = sort
@@ -94,10 +114,7 @@ const displayMovements = function (acc, sort = false) {
     const type = movement > 0 ? 'deposit' : 'withdrawal';
 
     const date = new Date(movementDate);
-    const day = `${date.getDate()}`.padStart(2, 0);
-    const month = `${date.getMonth()}`.padStart(2, 0);
-    const year = date.getFullYear();
-    const displayDate = `${day}/${month}/${year}`;
+    const displayDate = formatMovementDate(date);
 
     const html = `<div class="movements__row">
           <div class="movements__type movements__type--${type}">${
@@ -159,7 +176,9 @@ const updateUI = function (acc) {
   calcDisplaySummary(acc);
 };
 
+////////////////////////////////////////////
 // EVENT HANDLER
+
 let currentAccount;
 
 // Fake Always Logged In
@@ -1347,4 +1366,17 @@ console.log(Date.now());
 
 future.setFullYear(2040);
 console.log(future);
+
+
+////////////////////////////////
+// OPERATIONS WITH THE DATES
+
+const future = new Date(2037, 10, 19, 15, 23);
+console.log(+future);
+
+const calcDaysPassed = (date1, date2) =>
+  Math.abs(date2 - date1) / (1000 * 60 * 60 * 24);
+
+const day1 = calcDaysPassed(new Date(2037, 3, 14), new Date(2037, 3, 24));
+console.log(day1);
 */
