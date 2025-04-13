@@ -1,26 +1,27 @@
-# 🎲 DiceQuest (Pig Game)
+# Bankist App
 
-A simple yet exciting two-player dice game where the goal is to reach 100 points first! This project demonstrates JavaScript event handling, conditional logic, and dynamic UI updates.
+💳 **A modern banking application that allows users to view account balances, transfer money, request loans, and manage their finances.** This project showcases dynamic UI updates, user authentication, and interaction with account data using JavaScript.
 
 ## 🚀 Live Demo
-🔗 [Play DiceQuest](#)
+🔗 [Play Bankist App](#)
 
-## 📜 How to Play
-
-1. Players take turns rolling a six-sided die.
-2. Each roll adds to their current turn's score.
-3. A player can **Hold** to save their score and pass the turn to the next player.
-4. Rolling a **1** loses the current turn’s score, and the turn switches to the other player.
-5. The first player to reach 100 points wins! 🎉
+## 📜 Features
+- **Login & Authentication:** Secure login with username and pin.
+- **View Movements:** Displays all account movements, including deposits, withdrawals, and transfers.
+- **Balance Calculation:** Shows the current balance after every transaction.
+- **Transfer Money:** Send money to other accounts within the platform.
+- **Request Loan:** Users can request loans if they have a qualifying balance history.
+- **Account Closure:** Users can close their accounts after authenticating.
+- **Sort Transactions:** Sort account movements by ascending/descending order for better visibility.
 
 ## 🛠️ Technologies Used
-
-- **HTML** – UI elements & layout.
-- **CSS** – Styling for a fun gaming experience.
-- **JavaScript** – Game logic, event listeners, and UI updates.
+- **HTML** – Structured the application layout.
+- **CSS** – Applied styling for a responsive and user-friendly interface.
+- **JavaScript** – Logic for handling user inputs, authentication, and managing transactions.
+- **Date API** – Used to display the current date and time for each login.
 
 ## 🎯 Why This Project?
-
-- **JavaScript** event-driven programming.
-- Dynamic **DOM manipulation** for interactive gameplay.
-- **State management** using variables & conditions to track game progress.
+- **JavaScript event handling** for user interaction.
+- **State management** with arrays and objects.
+- **LocalStorage** for storing user data (optional for persistent data).
+- **Dynamic DOM manipulation** for real-time updates of the UI based on user actions.
