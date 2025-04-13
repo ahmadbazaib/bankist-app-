@@ -23,5 +23,4 @@
 ## 🎯 Why This Project?
 - **JavaScript event handling** for user interaction.
 - **State management** with arrays and objects.
-- **LocalStorage** for storing user data (optional for persistent data).
 - **Dynamic DOM manipulation** for real-time updates of the UI based on user actions.
