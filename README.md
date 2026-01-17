@@ -6,7 +6,7 @@ A modern, interactive banking application built with **HTML**, **CSS**, and **Ja
 
 ## 🚀 Live Demo
 
-🔗 [Bankist App](https://bankist-app-bazaib.netlify.app/)
+🔗 [Bankist App](https://bankist-app-jinwoo.netlify.app/)
 
 ---
 
